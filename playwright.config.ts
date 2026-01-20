@@ -29,7 +29,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
     testIdAttribute: 'data-e2e', //customize test id attribute
-    actionTimeout: 17000, // 7 seconds
+    actionTimeout: 7000, // 7 seconds
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
     screenshot: 'on',
