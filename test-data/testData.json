@@ -5,7 +5,7 @@
     "parked-qa-automation-tools.com",
     "site-tools-demo.net"
   ],
-  "pageTitles": {
+  "pageHeadings": {
     "accounts": "Email Accounts",
     "forwarders": "Email Forwarders"
   },
