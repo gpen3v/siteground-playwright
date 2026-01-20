@@ -4,5 +4,10 @@
     "store.qa-automation-tools.com",
     "parked-qa-automation-tools.com",
     "site-tools-demo.net"
-  ]
+  ],
+  "pageTitles": {
+    "accounts": "Email Accounts",
+    "forwarders": "Email Forwarders"
+  },
+  "validationRequiredField": "Required field." 
 }
