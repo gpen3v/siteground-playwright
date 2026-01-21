@@ -1,24 +1,27 @@
 # Playwright Test Automation suite for SiteGround Web Application
 
-## Test Cases
-1. Add an email account.
-2. Add an empty email Forwarder.
+This project contains an end-to-end test automation suite built with Playwright
+to validate functionality in the Email section of the SiteGround web application.
+
+## Test Cases Coverage
+TC#1: Add an email account.
+TC#2: Add an empty email forwarder.
 
 ## Project Structure
 ```
-├── .github/workflows/        # GitHub Actions workflows for CI/CD
-│   └── playwright.yml          # Workflow for the Playwright tests
-├── pages/                    # Page Objects for reusable locators and custom methods
-│   ├── emailPage.ts            # Page object for the Email section
-│   └── navigation.ts           # Page object for the Navigation menu     
-├── test-data/                # Test data
-│   └── testData.json           # Test data file              
-├── tests/                    # E2E tests folder
-│   └── emailSection.spec.ts    # Tests for new email account and new email forwarder
-├── utils/                    # Utils folder
-│     └── utils.ts              # File for helping functions
-├── global-setup.ts           # Global setup for authentication with a token and saving browser state
-└── playwright.config.ts      # Playwright configuration
+├── .github/workflows/          # GitHub Actions workflows for CI/CD
+│   └── playwright.yml            # Workflow for the Playwright tests
+├── pages/                      # Page Objects for reusable locators and custom methods
+│   ├── emailPage.ts              # Page object for the Email section
+│   └── navigation.ts             # Page object for the Navigation menu     
+├── test-data/                  # Test data
+│   └── testData.json             # Test data file              
+├── tests/                      # E2E tests folder
+│   └── emailSectionTests.spec.ts # Tests for new email account and new email forwarder
+├── utils/                      # Utils folder
+│     └── utils.ts                # Helpier functions file
+├── global-setup.ts             # Global setup for authentication with a token and saving browser state
+└── playwright.config.ts        # Playwright configuration
 ```
 
 ## Installation
@@ -55,7 +58,7 @@ npx playwright test
 
 ### Run a specific test file:
 ```bash
-npx playwright test tests/emailSection.spec.ts
+npx playwright test tests/emailSectionTests.spec.ts
 ```
 ### Run a specific test by its title:
 ```bash
@@ -66,3 +69,10 @@ npx playwright test --grep "Add a New Email Account"
 ```bash
 npx playwright test --headed
 ```
+
+## Additional Information
+
+- A global setup is implemented to perform authentication with a token and persist browser state.
+- Tests run automatically as part of a GitHub Actions CI/CD workflow.
+- The dotenv package is added, with sensitive data such as URLs, tokens, and credentials stored locally in a `.env` file and as repository secrets for CI/CD execution.
+- Playwright test reports are generated and published to GitHub Pages - https://gpen3v.github.io/siteground-playwright/

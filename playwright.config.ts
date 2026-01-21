@@ -14,6 +14,12 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 export default defineConfig({
   globalSetup: './global-setup.ts',
   testDir: './tests',
+  /* Maximum time one test can run for. */
+  timeout: 40 * 1000, // 40 seconds
+  expect: {
+    /* Maximum time for expect() */
+    timeout: 6 * 1000, // 6 seconds
+  },
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */

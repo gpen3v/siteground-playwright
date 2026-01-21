@@ -4,7 +4,7 @@ import { EmailPage } from '../pages/emailPage';
 import { getFirstName } from '../utils/utils';
 import testData from '../test-data/testData.json';
 
-test.describe('SiteGround Web Application - Email Section tests', () => {
+test.describe('SiteGround Web Application - Email Section Tests', () => {
   let navigation: Navigation;
   let emailSection: EmailPage;
   let testAccount: string | undefined;
